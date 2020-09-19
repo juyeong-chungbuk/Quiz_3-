@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Rockpaperscissors {
+
+	public static void main(String[] args) {
+		System.out.println("컴퓨터와 가위 바위 보 게임을 합니다.");
+		String str[]= {"가위","바위","보"};  //컴퓨터가 낼 것
+
+		while(true) {
+			Scanner scanner=new Scanner(System.in);
+		
+			int n=(int)(Math.random()*3);
+			System.out.print("가위 바위 보!>>");
+			String str2=scanner.next();  //사용자가 낼 것
+			
+			if(str2.equals(str[n])) {
+				System.out.println("사용자 = "+str2+", 컴퓨터 = "+str[n]+", 비겼습니다.");
+			}
+			else if(str2.equals("가위")) {
+				if(n==1)
+					System.out.println("사용자 = "+str2+", 컴퓨터 = "+str[n]+", 사용자가 졌습니다.");
+				else
+					System.out.println("사용자 = "+str2+", 컴퓨터 = "+str[n]+", 사용자가 이겼습니다.");
+			}
+			else if(str2.equals("바위")) {
+				if(n==0)
+					System.out.println("사용자 = "+str2+", 컴퓨터 = "+str[n]+", 사용자가 이겼습니다.");
+				else
+					System.out.println("사용자 = "+str2+", 컴퓨터 = "+str[n]+", 사용자가 졌습니다.");
+			}
+			else if(str2.equals("보")) {
+				if(n==0)
+					System.out.println("사용자 = "+str2+", 컴퓨터 = "+str[n]+", 사용자가 졌습니다.");
+				else
+					System.out.println("사용자 = "+str2+", 컴퓨터 = "+str[n]+", 사용자가 이겼습니다.");
+			}
+			else {
+				System.out.print("프로그램을 종료합니다.");
+				break;
+			}
+					
+	}
+	}
+
+}
